@@ -1,0 +1,13 @@
+apiVersion: v2
+appVersion: stable-latest
+deprecated: true
+description: Meshery Adapter for Performance
+icon: https://meshery.io/images/logos/meshery-logo.png
+maintainers:
+- email: urakiny@gmail.com
+  name: aisuko
+- email: maintainers@meshery.io
+  name: Meshery Authors
+name: meshery-perf
+type: application
+version: 0.5.0

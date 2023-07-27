@@ -1,0 +1,12 @@
+apiVersion: v2
+appVersion: stable-latest
+description: Meshery Adapter for Traefik Mesh chart.
+icon: https://meshery.io/images/logos/meshery-logo.png
+maintainers:
+- email: urakiny@gmail.com
+  name: aisuko
+- email: maintainers@meshery.io
+  name: Meshery Authors
+name: meshery-traefik-mesh
+type: application
+version: 0.5.0

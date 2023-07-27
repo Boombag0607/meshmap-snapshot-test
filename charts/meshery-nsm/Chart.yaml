@@ -1,0 +1,14 @@
+apiVersion: v2
+appVersion: stable-latest
+description: Meshery Adapter for Network Service Mesh.
+icon: https://meshery.io/images/logos/meshery-logo.png
+maintainers:
+- email: community@layer5.io
+  name: Layer5 Authors
+- email: urakiny@gmail.com
+  name: aisuko
+- email: lee.calcote@layer5.io
+  name: leecalcote
+name: meshery-nsm
+type: application
+version: 0.5.0

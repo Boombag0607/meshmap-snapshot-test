@@ -1,0 +1,13 @@
+apiVersion: v2
+description: Meshery Adapter for Cilium chart.
+icon: https://meshery.io/images/logos/meshery-logo.png
+maintainers:
+- email: urakiny@gmail.com
+  name: aisuko
+- email: leecalcote@gmail.com
+  name: leecalcote
+- email: community@layer5.io
+  name: Layer5 Authors
+name: meshery-cilium
+type: application
+version: 0.5.0

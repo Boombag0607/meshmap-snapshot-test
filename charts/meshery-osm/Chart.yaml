@@ -1,0 +1,14 @@
+apiVersion: v2
+appVersion: stable-latest
+description: Meshery Adapter for Open Service Mesh
+icon: https://meshery.io/images/logos/meshery-logo.png
+maintainers:
+- email: maintainers@meshery.io
+  name: Meshery Authors
+- email: urakiny@gmail.com
+  name: aisuko
+- email: lee.calcote@layer5.io
+  name: leecalcote
+name: meshery-osm
+type: application
+version: 0.5.0
