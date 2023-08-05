@@ -1,5 +1,5 @@
 apiVersion: v2
-appVersion: v0.6.112
+appVersion: v0.6.117
 dependencies:
 - condition: meshery-istio.enabled
   name: meshery-istio
@@ -53,7 +53,6 @@ keywords:
 - meshery-linkerd
 - meshery-consul
 - meshery-kuma
-- meshery-osm
 - meshery-nsm
 - meshery-traefik-mesh
 - meshery-nginx-sm
@@ -63,4 +62,4 @@ maintainers:
   name: Meshery Authors
 name: meshery
 type: application
-version: v0.6.112
+version: v0.6.117
