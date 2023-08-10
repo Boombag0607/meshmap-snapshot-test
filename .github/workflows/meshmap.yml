@@ -31,4 +31,4 @@ jobs:
           providerToken: ${{ secrets.MESHERY_PROVIDER_TOKEN }} # Meshery Cloud Authentication token, signin to meshery-cloud to get one, example: ey.....
           prNumber: ${{ env.PULL_NO }} # auto-filled from the above step
           application_type: Helm Chart # your application type, could be any of three: "Kubernetes Manifest", "Docker Compose", "Helm Chart"
-          filePath: / # relative file-path from the root directory in the github-runner env, you might require to checkout the repository as described in step 2
+          application_url: "https://github.com/meshery/meshery.io/raw/master/charts/meshery-v0.6.88.tgz" # relative file-path from the root directory in the github-runner env, you might require to checkout the repository as described in step 2
