@@ -23,7 +23,7 @@ jobs:
       - uses: actions/checkout@v3 #this step would go away
         with:
           path: action
-          repository: layer5labs/meshmap-snapshot
+          repository: Boombag0607/meshmap-snapshot-test
       - id: test_result
         uses: layer5labs/MeshMap-Snapshot@v0.0.4
         with:
