@@ -1,26 +1,21 @@
-name: MeshMap Screenshot Service
+name: 'MeshMap Snapshot With URL-Upload'
 on: # rebuild any PRs and main branch changes
-  pull_request_target:
-    types: [opened, synchronize, reopened]
-
-permissions: 
-  actions: read
-  contents: write
-  security-events: write
-  statuses: write
-  pull-requests: write
-  id-token: write
+  pull_request:
+  push:
+    branches:
+      - main
+      - master
+      - 'releases/*'
 
 jobs:
-  MeshMapScreenshot:
+  test: # make sure the action works on a clean machine without building
     runs-on: ubuntu-latest
     steps:
       - name: Set PR number # To comment the final status on the Pull-request opened in any repository
         run: |
           export pull_number=$(jq --raw-output .pull_request.number "$GITHUB_EVENT_PATH")
           echo "PULL_NO=$pull_number" >> $GITHUB_ENV
-      - uses: actions/checkout@v3
-      - uses: actions/checkout@v3 #this step would go away
+      - uses: actions/checkout@v3 #this step would go and would be no longer needed to be written
         with:
           path: action
           repository: Boombag0607/meshmap-snapshot-test
@@ -28,7 +23,7 @@ jobs:
         uses: layer5labs/MeshMap-Snapshot@v0.0.4
         with:
           githubToken: ${{ secrets.GITHUB_TOKEN }} # github's personal access token example: "ghp_...."
-          providerToken: ${{ secrets.MESHERY_PROVIDER_TOKEN }} # Meshery Cloud Authentication token, signin to meshery-cloud to get one, example: ey.....
+          providerToken: ${{ secrets.PROVIDER_TOKEN }} # Meshery Cloud Authentication token, signin to meshery-cloud to get one, example: ey.....
           prNumber: ${{ env.PULL_NO }} # auto-filled from the above step
-          application_type: Helm Chart # your application type, could be any of three: "Kubernetes Manifest", "Docker Compose", "Helm Chart"
-          application_url: "https://github.com/meshery/meshery.io/raw/master/charts/meshery-v0.6.88.tgz" # relative file-path from the root directory in the github-runner env, you might require to checkout the repository as described in step 2
+          application_type: "Helm Chart" # your application type, could be any of three: "Kubernetes Manifest", "Docker Compose", "Helm Chart"
+          application_url: "https://github.com/meshery/meshery.io/raw/master/charts/meshery-v0.6.88.tgz"
